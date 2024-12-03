@@ -25,6 +25,7 @@ npm run dev
 When the server starts successfully, you'll see this message in the console:
 Server is running on http://localhost:8000
 ```
+![Image](https://s32.picofile.com/file/8481043392/087.png)
 
 ## How it Works ⚙️
 
