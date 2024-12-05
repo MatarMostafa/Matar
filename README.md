@@ -13,8 +13,8 @@ This is a basic Node.js server setup using **Express** and **Nodemon**, created 
 ## Installation & Usage 📝
 
 ```bash
-1. git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+1. git clone https://github.com/MiladJoodi/Express_Starter_Project.git
+cd Express_Starter_Project
 
 2. Install dependencies
 npm install
