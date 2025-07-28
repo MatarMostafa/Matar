@@ -1,0 +1,32 @@
+import { benachrichtigungen, Benachrichtigung } from "../data/benachrichtigungen";
+
+let nextBenachrichtigungId = 1;
+
+export function sendeBenachrichtigung(empfaengerId: number, inhalt: string) {
+  const neueBenachrichtigung: Benachrichtigung = {
+    id: nextBenachrichtigungId++,
+    empfaengerId,
+    inhalt,
+    gelesen: false,
+    erstelltAm: new Date(),
+  };
+  benachrichtigungen.push(neueBenachrichtigung);
+}
+// src/Utils/benachrichtigungHelper.ts
+
+import { benachrichtigungen } from "../data/benachrichtigungen";
+
+export const sendeBenachrichtigung = (
+  empfaengerId: number,
+  typ: "einsatz" | "sperre" | "urlaub" | "info",
+  nachricht: string
+) => {
+  benachrichtigungen.push({
+    id: benachrichtigungen.length + 1,
+    empfaengerId,
+    typ,
+    nachricht,
+    datum: new Date().toISOString(),
+    gelesen: false,
+  });
+};

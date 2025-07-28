@@ -3,13 +3,15 @@ run = "npm run dev"
 
 [nix]
 channel = "stable-24_05"
-packages = ["rs"]
+packages = ["nodejs", "rs"]
 
 [deployment]
 run = ["sh", "-c", "npm run dev"]
 
-[[ports]]
-localPort = 8000
-externalPort = 80
+ports = [
+  { localPort = 3000, externalPort = 80 }
+]
 
-npm install json2csv
+[[ports]]
+localPort = 3000
+externalPort = 80

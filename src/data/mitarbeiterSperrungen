@@ -1,0 +1,4 @@
+// src/data/mitarbeiterSperrungen.ts
+export const mitarbeiterSperrungen: {
+  [mitarbeiterId: string]: string[]; // Liste von Kunden (nach E-Mail)
+} = {};
