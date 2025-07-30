@@ -3,37 +3,30 @@
 export interface Krankmeldung {
   id: number;
   mitarbeiterId: number;
-  von: string; // z.B. "2025-07-01"
-  bis: string;
+  von: string;  // ISO-Datum
+  bis: string;  // ISO-Datum
   grund: string;
+  status: "gemeldet" | "genehmigt" | "abgelehnt";
+  erstelltAm: string; // ISO-Datum
 }
 
-export const krankmeldungen: Krankmeldung[] = [];
-// src/data/krankmeldungen.ts
-
-export interface Krankmeldung {
-  mitarbeiterId: number;
-  datum: string;
-}
-
-export const krankmeldungen: Krankmeldung[] = [];
-// src/data/krankmeldungen.ts
-
-export interface Krankmeldung {
-  mitarbeiterId: number;
-  datum: string;
-}
-
-export const krankmeldungen: Krankmeldung[] = [];
-// src/data/krankmeldungen.ts
-
-export interface Krankmeldung {
-  id: number;
-  mitarbeiterId: number;
-  startDatum: string;   // Format: YYYY-MM-DD
-  endDatum: string;     // Format: YYYY-MM-DD
-  kommentar?: string;
-  status: "offen" | "genehmigt" | "abgelehnt";
-}
-
-export const krankmeldungen: Krankmeldung[] = [];
+export const krankmeldungen: Krankmeldung[] = [
+  {
+    id: 1,
+    mitarbeiterId: 1,
+    von: "2025-07-10",
+    bis: "2025-07-15",
+    grund: "Erkältung",
+    status: "genehmigt",
+    erstelltAm: "2025-07-09",
+  },
+  {
+    id: 2,
+    mitarbeiterId: 2,
+    von: "2025-07-20",
+    bis: "2025-07-22",
+    grund: "Grippe",
+    status: "gemeldet",
+    erstelltAm: "2025-07-19",
+  }
+];

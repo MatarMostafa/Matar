@@ -12,7 +12,8 @@ export const getAllAuftraege = (req: Request, res: Response, next: NextFunction)
 
 export const getAuftragById = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const auftrag = auftragService.getAuftragById(req.params.id);
+    const id = Number(req.params.id);
+    const auftrag = auftragService.getAuftragById(id);
     if (auftrag) {
       res.json(auftrag);
     } else {
@@ -34,7 +35,8 @@ export const createAuftrag = (req: Request, res: Response, next: NextFunction) =
 
 export const updateAuftrag = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const updated = auftragService.updateAuftrag(req.params.id, req.body);
+    const id = Number(req.params.id);
+    const updated = auftragService.updateAuftrag(id, req.body);
     if (updated) {
       res.json(updated);
     } else {
@@ -47,7 +49,8 @@ export const updateAuftrag = (req: Request, res: Response, next: NextFunction) =
 
 export const deleteAuftrag = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const success = auftragService.deleteAuftrag(req.params.id);
+    const id = Number(req.params.id);
+    const success = auftragService.deleteAuftrag(id);
     if (success) {
       res.status(204).send();
     } else {

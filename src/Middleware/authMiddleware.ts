@@ -1,21 +1,15 @@
-import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
+import { Request, Response, NextFunction } from "express";
 
-export const authenticateToken = (req: Request, res: Response, next: NextFunction): void => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) return res.status(401).json({ message: "Kein Token vorhanden" });
 
-  if (!token) {
-    res.status(401).json({ message: 'Kein Token vorhanden' });
-    return;
-  }
-
-  jwt.verify(token, process.env.JWT_SECRET || 'secretkey', (err, user) => {
-    if (err) {
-      res.status(403).json({ message: 'Ungültiger Token' });
-      return;
-    }
-    (req as any).user = user;
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+    (req as any).user = decoded;
     next();
-  });
+  } catch {
+    res.status(403).json({ message: "Ungültiges Token" });
+  }
 };

@@ -1,12 +1,13 @@
-// src/data/urlaub.ts
+import { Urlaub } from "../types/urlaub";
 
-export interface Urlaubsantrag {
-  id: number;
-  mitarbeiterId: number;
-  von: string; // ISO-Format: "YYYY-MM-DD"
-  bis: string;
-  status: "beantragt" | "genehmigt" | "abgelehnt";
-  kommentar?: string;
-}
-
-export const urlaubsantraege: Urlaubsantrag[] = [];
+export const urlaube: Urlaub[] = [
+  {
+    id: 1,
+    mitarbeiterId: 1,
+    von: "2025-08-10",
+    bis: "2025-08-20",
+    grund: "Sommerurlaub",
+    status: "genehmigt",
+    erstelltAm: "2025-07-15"
+  }
+];

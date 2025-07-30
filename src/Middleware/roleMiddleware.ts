@@ -1,14 +1,11 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from "express";
 
-export const authorizeRoles = (roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction): void => {
+export const roleMiddleware = (roles: string[]) => {
+  return (req: Request, res: Response, next: NextFunction) => {
     const user = (req as any).user;
-
     if (!user || !roles.includes(user.role)) {
-      res.status(403).json({ message: 'Keine Berechtigung' });
-      return;
+      return res.status(403).json({ message: "Keine Berechtigung" });
     }
-
     next();
   };
 };

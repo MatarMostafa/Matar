@@ -3,7 +3,7 @@
 import { Request, Response } from "express";
 import { mitarbeiter } from "../data/mitarbeiter";
 import { urlaub } from "../data/urlaub";
-import { krankmeldungen } from "../data/krank";
+import { krankmeldungen } from "../data/krankmeldungen";
 
 export const getAmpelStatus = (req: Request, res: Response) => {
   const heute = new Date();
