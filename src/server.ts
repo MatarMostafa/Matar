@@ -18,20 +18,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routen-Imports
-import mitarbeiterRoutes from './Routes/mitarbeiterRoutes';
-import auftragRoutes from './Routes/auftragRoutes';
-import autoPlanungRoutes from './Routes/autoPlanungRoutes';
-import ampelBewertungsRoutes from './Routes/ampelBewertungsRoutes';
-import emailServiceRoutes from './Routes/emailServiceRoutes';
-import pushServiceRoutes from './Routes/pushServiceRoutes';
-import notificationRoutes from './Routes/notificationRoutes';
-import adminKundenStatistikRoutes from './Routes/adminKundenStatistikRoutes';
-import adminUserStatistikRoutes from './Routes/adminUserStatistikRoutes';
-import kundenServiceRoutes from './Routes/kundenServiceRoutes';
-import zuweisungsRoutes from './Routes/zuweisungsRoutes';
-import exportRoutes from './Routes/exportRoutes';
-import benachrichtigungRoutes from './Routes/benachrichtigungRoutes';
-import mitarbeiterSperreRoutes from './Routes/mitarbeiterSperreRoutes'; // NEU
+import mitarbeiterRoutes from './routes/mitarbeiterRoutes';
+import auftragRoutes from './routes/auftragRoutes';
+import autoPlanungRoutes from './routes/autoPlanungRoutes';
+import ampelBewertungsRoutes from './routes/ampelBewertungsRoutes';
+import emailServiceRoutes from './routes/emailServiceRoutes';
+import pushServiceRoutes from './routes/pushServiceRoutes';
+import notificationRoutes from './routes/notificationRoutes';
+import adminKundenStatistikRoutes from './routes/adminKundenStatistikRoutes';
+import adminUserStatistikRoutes from './routes/adminUserStatistikRoutes';
+import kundenServiceRoutes from './routes/kundenServiceRoutes';
+import zuweisungsRoutes from './routes/zuweisungsRoutes';
+import exportRoutes from './routes/exportRoutes';
+import benachrichtigungRoutes from './routes/benachrichtigungRoutes';
+import mitarbeiterSperreRoutes from './routes/mitarbeiterSperreRoutes'; // NEU
 
 // Routen verwenden
 app.use('/api/mitarbeiter', mitarbeiterRoutes);

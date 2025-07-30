@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { authenticateToken } from "../Middleware/authMiddleware";
-import { authorizeRoles } from "../Middleware/roleMiddleware";
+import { authenticateToken } from "../middleware/authMiddleware";
+import { authorizeRoles } from "../middleware/roleMiddleware";
 import {
   exportiereCSV,
   exportiereJSON,
   exportiereAuftraegeAlsCSV
-} from "../Controllers/exportController"; // Hinweis: existieren muss exportController.ts
+} from "../controllers/exportController"; // Hinweis: existieren muss exportController.ts
 
 const router = Router();
 

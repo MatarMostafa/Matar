@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { authenticateToken } from "../Middleware/authMiddleware";
-import { authorizeRoles } from "../Middleware/roleMiddleware";
-import { automatischeZuweisung } from "../Controllers/zuweisungController";
+import { authenticateToken } from "../middleware/authMiddleware";
+import { authorizeRoles } from "../middleware/roleMiddleware";
+import { automatischeZuweisung } from "../controllers/zuweisungController";
 
 const router = Router();
 

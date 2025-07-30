@@ -1,20 +1,22 @@
-import { Mitarbeiter } from "../types/mitarbeiter";
+import { Mitarbeiter } from '../types/mitarbeiter';
 
-export const mitarbeiter: Mitarbeiter[] = [
+export const mitarbeiterData: Mitarbeiter[] = [
   {
     id: 1,
-    vorname: "Ali",
-    nachname: "Muster",
-    rolle: "Mitarbeiter",
-    qualifikationen: ["Reinigung", "Transport"],
-    status: "aktiv"
+    name: 'Max Mustermann',
+    rolle: 'admin',
+    aktiv: true
   },
   {
     id: 2,
-    vorname: "Sara",
-    nachname: "Beispiel",
-    rolle: "Teamleiter",
-    qualifikationen: ["Koordination"],
-    status: "aktiv"
+    name: 'Erika Musterfrau',
+    rolle: 'teamleiter',
+    aktiv: true
+  },
+  {
+    id: 3,
+    name: 'John Doe',
+    rolle: 'mitarbeiter',
+    aktiv: true
   }
 ];

@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { authenticateToken } from "../Middleware/authMiddleware";
-import { authorizeRoles } from "../Middleware/roleMiddleware";
+import { authenticateToken } from "../middleware/authMiddleware";
+import { authorizeRoles } from "../middleware/roleMiddleware";
 import {
   getBenachrichtigungen,
   createBenachrichtigung,
   deleteBenachrichtigung
-} from "../Controllers/benachrichtigungController";
+} from "../controllers/benachrichtigungController";
 
 const router = Router();
 

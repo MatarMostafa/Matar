@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
-import { authenticateToken } from "../Middleware/authMiddleware";
-import { authorizeRoles } from "../Middleware/roleMiddleware";
+import { authenticateToken } from "../middleware/authMiddleware";
+import { authorizeRoles } from "../middleware/roleMiddleware";
 
 const router = Router();
 

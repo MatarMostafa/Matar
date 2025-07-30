@@ -1,5 +1,5 @@
 import express from 'express';
-import { sendePush } from '../Controllers/pushServiceController';
+import { sendePush } from '../controllers/pushServiceController';
 
 const router = express.Router();
 

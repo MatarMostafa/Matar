@@ -1,11 +1,9 @@
 export interface Auftrag {
-  id: number; // war string → jetzt number
+  id: number;
+  kundeId: number;
+  mitarbeiterId: number;  // <-- hinzugefügt
   kunde: string;
-  ort: string;
-  datum: string;
-  dauer: string;
-  anzahlMitarbeiter: number;
-  qualifikationen: number;
+  beschreibung: string;
   status: string;
-  erstelltVon: string;
+  datum: string;
 }

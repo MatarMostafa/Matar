@@ -1,7 +1,6 @@
 export interface Mitarbeiter {
-  id: string;
+  id: number;
   name: string;
-  email: string;
   rolle: 'admin' | 'teamleiter' | 'mitarbeiter';
-  status: 'aktiv' | 'inaktiv' | 'krank';
+  aktiv: boolean;
 }
